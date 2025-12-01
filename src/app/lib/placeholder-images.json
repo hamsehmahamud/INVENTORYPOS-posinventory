@@ -1,0 +1,59 @@
+
+{
+    "dashboard": {
+        "src": "https://picsum.photos/seed/dashboard24/800/450",
+        "data-ai-hint": "dashboard analytics"
+    },
+    "login": {
+        "src": "https://picsum.photos/seed/loginscreen/500/400",
+        "data-ai-hint": "login screen"
+    },
+    "pos": {
+        "src": "https://picsum.photos/seed/posinterface/800/450",
+        "data-ai-hint": "pos interface"
+    },
+    "reports": {
+        "src": "https://picsum.photos/seed/reports/800/450",
+        "data-ai-hint": "business reports"
+    },
+    "newItem": {
+        "src": "https://picsum.photos/seed/newitem/800/550",
+        "data-ai-hint": "add item form"
+    },
+    "customerList": {
+        "src": "https://picsum.photos/seed/customerlist/800/450",
+        "data-ai-hint": "customer list"
+    },
+    "itemsList": {
+        "src": "https://picsum.photos/seed/itemslist/800/450",
+        "data-ai-hint": "items list"
+    },
+    "importItems": {
+        "src": "https://picsum.photos/seed/importitems/800/550",
+        "data-ai-hint": "import items"
+    },
+    "salesList": {
+        "src": "https://picsum.photos/seed/saleslist/800/450",
+        "data-ai-hint": "sales list"
+    },
+    "newPurchase": {
+        "src": "https://picsum.photos/seed/newpurchase/800/550",
+        "data-ai-hint": "new purchase form"
+    },
+    "purchasesList": {
+        "src": "https://picsum.photos/seed/purchaseslist/800/450",
+        "data-ai-hint": "purchases list"
+    },
+    "newCustomer": {
+        "src": "https://picsum.photos/seed/newcustomer/800/550",
+        "data-ai-hint": "new customer form"
+    },
+    "newSupplier": {
+        "src": "https://picsum.photos/seed/newsupplier/800/550",
+        "data-ai-hint": "new supplier form"
+    },
+    "newExpense": {
+        "src": "https://picsum.photos/seed/newexpense/800/550",
+        "data-ai-hint": "new expense form"
+    }
+}

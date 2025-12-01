@@ -1,0 +1,4 @@
+name,price,quantity,status,sku,category,brand,description,image,hsn,unit,minQuantity,purchasePrice,tax
+Classic T-Shirt,19.99,100,In Stock,SKU-TS-001,Apparel,InvoWear,"A high-quality classic t-shirt.",https://placehold.co/100x100.png,HSN123,pc,10,10.00,"VAT 5%"
+Leather Wallet,49.99,50,In Stock,SKU-LW-002,Accessories,InvoWear,"A genuine leather wallet.",https://placehold.co/100x100.png,HSN124,pc,5,25.00,"VAT 5%"
+Wireless Headphones,129.99,25,Low Stock,SKU-WH-003,Electronics,TechGear,"Noise-cancelling wireless headphones.",https://placehold.co/100x100.png,HSN125,pc,5,80.00,"GST 18%"
