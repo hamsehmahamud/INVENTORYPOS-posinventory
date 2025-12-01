@@ -243,6 +243,19 @@ function AppSidebar() {
 
     const filterLinks = (links: any[]) => links.filter(link => hasPermission(link.permission));
 
+    const [subOpenMenu, setSubOpenMenu] = useState<string | null>(null);
+
+    const handleSubMenuOpenChange = (menu: string) => (isOpen: boolean) => {
+        setSubOpenMenu(isOpen ? menu : null);
+    };
+
+    // Reset sub-menu when main menu changes
+    useEffect(() => {
+        if (openMenu !== 'accounting') {
+            setSubOpenMenu(null);
+        }
+    }, [openMenu]);
+
     return (
         <Sidebar>
             <div className="flex h-full flex-col">
@@ -479,7 +492,7 @@ function AppSidebar() {
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
                                                 {hasPermission('accounting-view') && (
-                                                    <Collapsible>
+                                                    <Collapsible open={subOpenMenu === 'receivable'} onOpenChange={handleSubMenuOpenChange('receivable')}>
                                                         <SidebarMenuItem>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
@@ -509,7 +522,7 @@ function AppSidebar() {
                                                 )}
 
                                                 {hasPermission('accounting-view') && (
-                                                    <Collapsible>
+                                                    <Collapsible open={subOpenMenu === 'payable'} onOpenChange={handleSubMenuOpenChange('payable')}>
                                                         <SidebarMenuItem>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
@@ -539,7 +552,7 @@ function AppSidebar() {
                                                 )}
 
                                                 {hasPermission('payments-manage') && (
-                                                    <Collapsible>
+                                                    <Collapsible open={subOpenMenu === 'payments'} onOpenChange={handleSubMenuOpenChange('payments')}>
                                                         <SidebarMenuItem>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
@@ -569,7 +582,7 @@ function AppSidebar() {
                                                 )}
 
                                                 {hasPermission('payments-manage') && (
-                                                    <Collapsible>
+                                                    <Collapsible open={subOpenMenu === 'supplier-payments'} onOpenChange={handleSubMenuOpenChange('supplier-payments')}>
                                                         <SidebarMenuItem>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
@@ -599,7 +612,7 @@ function AppSidebar() {
                                                 )}
 
                                                 {hasPermission('reports-view-all') && (
-                                                    <Collapsible>
+                                                    <Collapsible open={subOpenMenu === 'statements'} onOpenChange={handleSubMenuOpenChange('statements')}>
                                                         <SidebarMenuItem>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
