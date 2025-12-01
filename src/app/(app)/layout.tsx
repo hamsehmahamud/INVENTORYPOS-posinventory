@@ -492,8 +492,8 @@ function AppSidebar() {
                                         <CollapsibleContent>
                                             <SidebarMenuSub>
                                                 {hasPermission('accounting-view') && (
-                                                    <Collapsible open={subOpenMenu === 'receivable'} onOpenChange={handleSubMenuOpenChange('receivable')}>
-                                                        <SidebarMenuItem>
+                                                    <SidebarMenuItem>
+                                                        <Collapsible open={subOpenMenu === 'receivable'} onOpenChange={handleSubMenuOpenChange('receivable')}>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
                                                                     tooltip="Account Receivable"
@@ -503,27 +503,27 @@ function AppSidebar() {
                                                                     <span className="sidebar-shown">Account Receivable</span>
                                                                 </SidebarMenuButton>
                                                             </CollapsibleTrigger>
-                                                        </SidebarMenuItem>
-                                                        <CollapsibleContent>
-                                                            <SidebarMenuSub>
-                                                                {filterLinks(accountingLinks.receivable).map((link) => (
-                                                                    <SidebarMenuItem key={link.href}>
-                                                                        <SidebarMenuSubButton asChild isActive={pathname === link.href}>
-                                                                            <Link href={link.href}>
-                                                                                <link.icon />
-                                                                                <span className="sidebar-shown">{link.label}</span>
-                                                                            </Link>
-                                                                        </SidebarMenuSubButton>
-                                                                    </SidebarMenuItem>
-                                                                ))}
-                                                            </SidebarMenuSub>
-                                                        </CollapsibleContent>
-                                                    </Collapsible>
+                                                            <CollapsibleContent>
+                                                                <SidebarMenuSub>
+                                                                    {filterLinks(accountingLinks.receivable).map((link) => (
+                                                                        <SidebarMenuItem key={link.href}>
+                                                                            <SidebarMenuSubButton asChild isActive={pathname === link.href}>
+                                                                                <Link href={link.href}>
+                                                                                    <link.icon />
+                                                                                    <span className="sidebar-shown">{link.label}</span>
+                                                                                </Link>
+                                                                            </SidebarMenuSubButton>
+                                                                        </SidebarMenuItem>
+                                                                    ))}
+                                                                </SidebarMenuSub>
+                                                            </CollapsibleContent>
+                                                        </Collapsible>
+                                                    </SidebarMenuItem>
                                                 )}
 
                                                 {hasPermission('accounting-view') && (
-                                                    <Collapsible open={subOpenMenu === 'payable'} onOpenChange={handleSubMenuOpenChange('payable')}>
-                                                        <SidebarMenuItem>
+                                                    <SidebarMenuItem>
+                                                        <Collapsible open={subOpenMenu === 'payable'} onOpenChange={handleSubMenuOpenChange('payable')}>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
                                                                     tooltip="Account Payable"
@@ -533,27 +533,27 @@ function AppSidebar() {
                                                                     <span className="sidebar-shown">Account Payable</span>
                                                                 </SidebarMenuButton>
                                                             </CollapsibleTrigger>
-                                                        </SidebarMenuItem>
-                                                        <CollapsibleContent>
-                                                            <SidebarMenuSub>
-                                                                {filterLinks(accountingLinks.payable).map((link) => (
-                                                                    <SidebarMenuItem key={link.href}>
-                                                                        <SidebarMenuSubButton asChild isActive={pathname === link.href}>
-                                                                            <Link href={link.href}>
-                                                                                <link.icon />
-                                                                                <span className="sidebar-shown">{link.label}</span>
-                                                                            </Link>
-                                                                        </SidebarMenuSubButton>
-                                                                    </SidebarMenuItem>
-                                                                ))}
-                                                            </SidebarMenuSub>
-                                                        </CollapsibleContent>
-                                                    </Collapsible>
+                                                            <CollapsibleContent>
+                                                                <SidebarMenuSub>
+                                                                    {filterLinks(accountingLinks.payable).map((link) => (
+                                                                        <SidebarMenuItem key={link.href}>
+                                                                            <SidebarMenuSubButton asChild isActive={pathname === link.href}>
+                                                                                <Link href={link.href}>
+                                                                                    <link.icon />
+                                                                                    <span className="sidebar-shown">{link.label}</span>
+                                                                                </Link>
+                                                                            </SidebarMenuSubButton>
+                                                                        </SidebarMenuItem>
+                                                                    ))}
+                                                                </SidebarMenuSub>
+                                                            </CollapsibleContent>
+                                                        </Collapsible>
+                                                    </SidebarMenuItem>
                                                 )}
 
                                                 {hasPermission('payments-manage') && (
-                                                    <Collapsible open={subOpenMenu === 'payments'} onOpenChange={handleSubMenuOpenChange('payments')}>
-                                                        <SidebarMenuItem>
+                                                    <SidebarMenuItem>
+                                                        <Collapsible open={subOpenMenu === 'payments'} onOpenChange={handleSubMenuOpenChange('payments')}>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
                                                                     tooltip="Customer Payments"
@@ -563,27 +563,27 @@ function AppSidebar() {
                                                                     <span className="sidebar-shown">Customer Payments</span>
                                                                 </SidebarMenuButton>
                                                             </CollapsibleTrigger>
-                                                        </SidebarMenuItem>
-                                                        <CollapsibleContent>
-                                                            <SidebarMenuSub>
-                                                                {filterLinks(accountingLinks.payments).map((link) => (
-                                                                    <SidebarMenuItem key={link.href}>
-                                                                        <SidebarMenuSubButton asChild isActive={pathname === link.href}>
-                                                                            <Link href={link.href}>
-                                                                                <link.icon />
-                                                                                <span className="sidebar-shown">{link.label}</span>
-                                                                            </Link>
-                                                                        </SidebarMenuSubButton>
-                                                                    </SidebarMenuItem>
-                                                                ))}
-                                                            </SidebarMenuSub>
-                                                        </CollapsibleContent>
-                                                    </Collapsible>
+                                                            <CollapsibleContent>
+                                                                <SidebarMenuSub>
+                                                                    {filterLinks(accountingLinks.payments).map((link) => (
+                                                                        <SidebarMenuItem key={link.href}>
+                                                                            <SidebarMenuSubButton asChild isActive={pathname === link.href}>
+                                                                                <Link href={link.href}>
+                                                                                    <link.icon />
+                                                                                    <span className="sidebar-shown">{link.label}</span>
+                                                                                </Link>
+                                                                            </SidebarMenuSubButton>
+                                                                        </SidebarMenuItem>
+                                                                    ))}
+                                                                </SidebarMenuSub>
+                                                            </CollapsibleContent>
+                                                        </Collapsible>
+                                                    </SidebarMenuItem>
                                                 )}
 
                                                 {hasPermission('payments-manage') && (
-                                                    <Collapsible open={subOpenMenu === 'supplier-payments'} onOpenChange={handleSubMenuOpenChange('supplier-payments')}>
-                                                        <SidebarMenuItem>
+                                                    <SidebarMenuItem>
+                                                        <Collapsible open={subOpenMenu === 'supplier-payments'} onOpenChange={handleSubMenuOpenChange('supplier-payments')}>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
                                                                     tooltip="Supplier Payments"
@@ -593,27 +593,27 @@ function AppSidebar() {
                                                                     <span className="sidebar-shown">Supplier Payments</span>
                                                                 </SidebarMenuButton>
                                                             </CollapsibleTrigger>
-                                                        </SidebarMenuItem>
-                                                        <CollapsibleContent>
-                                                            <SidebarMenuSub>
-                                                                {filterLinks(accountingLinks.supplierPayments).map((link) => (
-                                                                    <SidebarMenuItem key={link.href}>
-                                                                        <SidebarMenuSubButton asChild isActive={pathname === link.href}>
-                                                                            <Link href={link.href}>
-                                                                                <link.icon />
-                                                                                <span className="sidebar-shown">{link.label}</span>
-                                                                            </Link>
-                                                                        </SidebarMenuSubButton>
-                                                                    </SidebarMenuItem>
-                                                                ))}
-                                                            </SidebarMenuSub>
-                                                        </CollapsibleContent>
-                                                    </Collapsible>
+                                                            <CollapsibleContent>
+                                                                <SidebarMenuSub>
+                                                                    {filterLinks(accountingLinks.supplierPayments).map((link) => (
+                                                                        <SidebarMenuItem key={link.href}>
+                                                                            <SidebarMenuSubButton asChild isActive={pathname === link.href}>
+                                                                                <Link href={link.href}>
+                                                                                    <link.icon />
+                                                                                    <span className="sidebar-shown">{link.label}</span>
+                                                                                </Link>
+                                                                            </SidebarMenuSubButton>
+                                                                        </SidebarMenuItem>
+                                                                    ))}
+                                                                </SidebarMenuSub>
+                                                            </CollapsibleContent>
+                                                        </Collapsible>
+                                                    </SidebarMenuItem>
                                                 )}
 
                                                 {hasPermission('reports-view-all') && (
-                                                    <Collapsible open={subOpenMenu === 'statements'} onOpenChange={handleSubMenuOpenChange('statements')}>
-                                                        <SidebarMenuItem>
+                                                    <SidebarMenuItem>
+                                                        <Collapsible open={subOpenMenu === 'statements'} onOpenChange={handleSubMenuOpenChange('statements')}>
                                                             <CollapsibleTrigger asChild>
                                                                 <SidebarMenuButton
                                                                     tooltip="Statements"
@@ -623,22 +623,22 @@ function AppSidebar() {
                                                                     <span className="sidebar-shown">Statements</span>
                                                                 </SidebarMenuButton>
                                                             </CollapsibleTrigger>
-                                                        </SidebarMenuItem>
-                                                        <CollapsibleContent>
-                                                            <SidebarMenuSub>
-                                                                {filterLinks(accountingLinks.statements).map((link) => (
-                                                                    <SidebarMenuItem key={link.href}>
-                                                                        <SidebarMenuSubButton asChild isActive={pathname.startsWith(link.href)}>
-                                                                            <Link href={link.href}>
-                                                                                <link.icon />
-                                                                                <span className="sidebar-shown">{link.label}</span>
-                                                                            </Link>
-                                                                        </SidebarMenuSubButton>
-                                                                    </SidebarMenuItem>
-                                                                ))}
-                                                            </SidebarMenuSub>
-                                                        </CollapsibleContent>
-                                                    </Collapsible>
+                                                            <CollapsibleContent>
+                                                                <SidebarMenuSub>
+                                                                    {filterLinks(accountingLinks.statements).map((link) => (
+                                                                        <SidebarMenuItem key={link.href}>
+                                                                            <SidebarMenuSubButton asChild isActive={pathname.startsWith(link.href)}>
+                                                                                <Link href={link.href}>
+                                                                                    <link.icon />
+                                                                                    <span className="sidebar-shown">{link.label}</span>
+                                                                                </Link>
+                                                                            </SidebarMenuSubButton>
+                                                                        </SidebarMenuItem>
+                                                                    ))}
+                                                                </SidebarMenuSub>
+                                                            </CollapsibleContent>
+                                                        </Collapsible>
+                                                    </SidebarMenuItem>
                                                 )}
                                             </SidebarMenuSub>
                                         </CollapsibleContent>
