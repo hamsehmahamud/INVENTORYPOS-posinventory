@@ -1,2 +1,2 @@
-const nextGenkit = require('@genkit-ai/next');
-console.log(Object.keys(nextGenkit));
+const genkit = require('genkit');
+console.log(Object.keys(genkit).sort());
