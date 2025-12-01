@@ -1,4 +1,5 @@
 import "@/ai/dev";
-import { GENKIT_API_DEFAULT_OPTIONS, genkitAPI } from "@genkit-ai/next";
+import { appRoute } from "@genkit-ai/next";
+import { ai } from "@/ai/genkit";
 
-export const { GET, POST } = genkitAPI(GENKIT_API_DEFAULT_OPTIONS);
+export const { GET, POST } = appRoute(ai);
